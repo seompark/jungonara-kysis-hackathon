@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>중고나라</title>
     <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/after-login.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
@@ -35,8 +35,7 @@
                     </div>
                 </div>
                 <div class="navbar__end">
-                    <a href="./login.html" class="btn btn--red">로그인</a>
-                    <a class="btn btn--grey">회원가입</a>
+                    <a href="./post.html" class="fas fa-plus" id="create"></a>
                 </div>
             </div>
         </nav>
@@ -214,6 +213,11 @@
             </div>
         </section>
     </main>
+    <script>
+        $(() => {
+            $('#create').on('click', () => window.location = './post.html')
+        })
+    </script>
 </body>
 
 </html>

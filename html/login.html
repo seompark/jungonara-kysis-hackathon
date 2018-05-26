@@ -10,53 +10,37 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="https://raw.githubusercontent.com/jpillora/notifyjs/master/dist/notify.js"></script>
+    <script src="https://raw.githubusercontent.com/pandao/editor.md/master/editormd.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar__wrapper">
-                <a class="navbar__brand" href="/">
-                    <img class="navbar__logo" src="image/logo.png">
-                </a>
-                <div class="navbar__menu">
-                    <div class="navbar__menu-item">
-                        <button class="navbar__menu-title">디자인</button>
-                        <div class="navbar__menu-content">
-                            <a class="navbar__submenu">미술</a>
-                            <a class="navbar__submenu">UI/UX</a>
+        <header>
+            <nav class="navbar">
+                <div class="navbar__wrapper">
+                    <a class="navbar__brand" href="./after-login.html">
+                        <img class="navbar__logo" src="image/logo.png">
+                    </a>
+                    <div class="navbar__menu">
+                        <div class="navbar__menu-item">
+                            <button class="navbar__menu-title">디자인</button>
+                        </div>
+                        <div class="navbar__menu-item">
+                            <button class="navbar__menu-title">IT</button>
+                        </div>
+                        <div class="navbar__menu-item">
+                            <button class="navbar__menu-title">교과목</button>
+                        </div>
+                        <div class="navbar__menu-item">
+                            <button class="navbar__menu-title">요리</button>
                         </div>
                     </div>
-                    <div class="navbar__menu-item">
-                        <button class="navbar__menu-title">디자인</button>
-                        <div class="navbar__menu-content">
-                            <a class="navbar__submenu">미술</a>
-                            <a class="navbar__submenu">UI/UX</a>
-                        </div>
-                    </div>
-                    <div class="navbar__menu-item">
-                        <button class="navbar__menu-title">디자인</button>
-                        <div class="navbar__menu-content">
-                            <a class="navbar__submenu">미술</a>
-                            <a class="navbar__submenu">UI/UX</a>
-                        </div>
-                    </div>
-                    <div class="navbar__menu-item">
-                        <button class="navbar__menu-title">디자인</button>
-                        <div class="navbar__menu-content">
-                            <a class="navbar__submenu">미술</a>
-                            <a class="navbar__submenu">UI/UX</a>
-                        </div>
+                    <div class="navbar__end">
+                        <a href="./login.html" class="btn btn--red">로그인</a>
+                        <a class="btn btn--grey">회원가입</a>
                     </div>
                 </div>
-                <div class="navbar__end">
-                    <button class="btn btn--red">로그인</button>
-                    <button class="btn btn--grey">회원가입</button>
-                </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
     <main>
         <div>
             <div>
@@ -76,7 +60,7 @@
     $('#submit').on('click', () => {
         localStorage.setItem('id', $('#input-id').val())
 
-        window.location = './index.html'
+        window.location = './after-login.html'
     })
 
     </script>
