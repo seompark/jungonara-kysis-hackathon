@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  box-shadow: 0.5px 0.5px 0.5px grey;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-title {
+  padding-top: 8rem;
+  font-size: 35px;
+}
+
+.article-subtitle {
+  margin-bottom: 1rem;
+  padding: 1rem 6rem 1rem 6rem;
+  font-size: 15px;
+  border-bottom: 1px solid grey;
+}
+
+p {
+  margin: 0;
+}
+
+.article .button-red {
+    padding: 0.5rem 3rem;
+    margin-top: 1rem;
+}
+
+.stat {
+  background-color: #f9f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7rem;
+  padding: 0.5rem 0;
+}
+
+.stat-cell {
+  width: 20%;
+  margin: 1rem 2rem;
+}
+
+.vertical-line {
+  border-left: 2px solid grey;
+  height: 2rem;
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  font-family: 'Noto Sans KR';
+  background-color: #f9f7f7;
+  padding: 1rem;
+  position: relative;
+}
+
+.card-tag {
+  background-color: #c6c6c6;
+  display: inline-block;
+  color: #fff;
+  font-size: 11px;
+  padding: 0.2rem;
+  box-shadow: 0 0.5px 0.5px 0 grey;
+  position: absolute;
+  top: -0.2rem;
+}
+
+.card-title {
+  color: #ff4343;
+  font-weight: 600;
+  font-size: 15px;
+  padding-top: 0.5rem;
+}
+
+.card-hashtag {
+  color: #606060;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.card-info {
+  height: 10px;
+  display: flex;
+  padding-right: 2rem;
+}
+
+.card-info-text {
+  color: #606060;
+  font-size: 12px;
+  padding: 0 1rem;
+}
+ 
+.card-text {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.card-subtitle {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem;
+}
+
+.card-wrapper {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 400px 400px 400px;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}

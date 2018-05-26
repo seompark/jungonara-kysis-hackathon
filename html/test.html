@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.20.10/dist/sweetalert2.all.min.js"></script>
+        <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+              crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div>
+            <label for="input-chat">chat</label>
+            <input id="input-chat">
+            <button id="submit-chat">submit</button>
+            <ul id="messages"></ul>
+        </div>
+        <div>
+            <label for="input-profile">set id</label>
+            <input id="input-profile">
+            <button id="submit-profile">set</button>
+            <p id="my-id">0</p>
+        </div>
+        <div>
+            <div>
+                <label for="input-school">school name</label>
+                <input id="input-school">
+            </div>
+            <div>
+                <label for="input-to">to</label>
+                <input id="input-to">
+            </div>
+            <button id="request">request</button>
+        </div>
+        <script>
+            let id = '0'
+            const socket = io('http://localhost:8000')
+            socket.open()
+
+            $('#submit-chat').on('click', e => {
+                const $input = $('#input-chat')
+                socket.emit('chat', { from: id, message: $input.val() })
+                $input.val('')
+            })
+
+            $('#request').on('click', e => {
+                socket.emit('school request', { to: $('#input-to').val(), school: $('#input-school').val() })
+            })
+
+            $('#submit-profile').on('click', e => {
+                id = $('#input-profile').val()
+                $('#my-id').text(id)
+            })
+
+            socket.on('chat', ({ from, message }) => {
+                $('#messages').prepend($('<li>').text(`${from} : ${message}`))
+            })
+
+            socket.on('school request', ({ to, school }) => {
+                if (id === to) {
+                    SweetAlert({
+                        showCancelButton: true,
+                        text: school
+                    }).then(result => {
+                        console.log(result)
+                        socket.emit('school response', { to, school, decision: result })
+                    })
+                }
+            })
+            socket.on('school response', ({ to, school, decision }) => {
+                console.log(to, decision, school)
+                if (school === $('#input-school').val()) {
+                    if (decision) {
+                        SweetAlert('yeah ' + to + ' ' + school)
+                    } else {
+                        SweetAlert('nah ' + to + ' ' + school)
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

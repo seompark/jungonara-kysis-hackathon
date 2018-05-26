@@ -1,0 +1,24 @@
+{
+  "name": "jungonara-kysis-hackathon",
+  "version": "1.0.0",
+  "description": "wow",
+  "main": "index.js",
+  "repository": "https://github.com/a1p4ca/jungonara-kysis-hackathon",
+  "author": "a1p4ca <dreamaker7770@gmail.com>",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node index.js",
+    "start": "cross-env NODE_ENV=production node index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "fancy-log": "^1.3.2",
+    "hapi": "^17.5.0",
+    "hapi-auth-jwt2": "^8.1.0",
+    "hapi-pino": "^4.0.4",
+    "jsonwebtoken": "^8.2.1",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.6"
+  }
+}

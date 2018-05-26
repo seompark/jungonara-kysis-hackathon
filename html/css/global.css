@@ -1,0 +1,117 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+@font-face {
+  font-family: 'dream';
+  font-weight: 400;
+  src: url('../fonts/dream(3).otf') format('opentype');
+}
+@font-face {
+  font-family: 'dream';
+  font-weight: 700;
+  src: url('../fonts/dream(5).otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'dream';
+  font-weight: 900;
+  src: url('../fonts/dream(7).otf') format('opentype');
+}
+
+.noto-sans {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1.3rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn--red {
+  background-color: #ff4343;
+}
+
+.btn--red:hover {
+  background-color: #e24545;
+}
+
+.btn--grey {
+  background-color: #b6b6b6;
+}
+
+.btn--grey:hover {
+  background-color: #777777;
+}
+
+.navbar {
+  height: 70px;
+}
+
+.navbar__wrapper {
+  display: flex;
+  align-items: center;
+  width: 1160px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar__logo {
+  width: 180px;
+}
+
+.navbar__menu {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  height: 100%;
+  margin: 0 4rem;
+}
+
+.navbar__menu-item {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: border 0.1s;
+  cursor: pointer;
+}
+
+.navbar__menu-item:hover {
+  border-bottom: 2px solid #ff4343;
+}
+
+.navbar__menu-title {
+  background-color: #fff;
+  border: 0;
+  font-size: 16px;
+}
+
+.navbar__end {
+  margin-left: auto;
+}
+
+

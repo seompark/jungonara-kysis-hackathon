@@ -1,0 +1,11 @@
+const JWT = require('jsonwebtoken')
+
+exports.auth = () => ({})
+exports.getMarket = () => ({})
+exports.postPost = () => ({})
+exports.getPost = () => ({})
+exports.deletePost = () => ({})
+exports.postComment = () => ({})
+exports.deleteComment = () => ({})
+exports.getSchool = () => ({})
+exports.postSchool = () => ({})
